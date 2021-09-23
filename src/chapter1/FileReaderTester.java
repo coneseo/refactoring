@@ -27,6 +27,5 @@ public class FileReaderTester {
             ch = (char) _input.read();
             assert('d' == ch);
         }
-
     }
 }
