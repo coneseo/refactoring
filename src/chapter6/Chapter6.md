@@ -45,3 +45,15 @@
     System.out.println("고객명: "+_name);
     System.out.println("외상액: "+outstanding);
 ~~~
+
+~~~
+    void printOwing(){
+        Enumeration e = _orders.elements();
+        double outstanding = 0.0;
+
+        while (e.hasMoreElements()){
+        Order each = (Order) e.nextElements();
+        outstanding += each.getAmount();
+        }
+    }   
+~~~
