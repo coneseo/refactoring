@@ -60,3 +60,19 @@
 예제: 지역변수 사용
 지역변수 문제 중 제일 가벼운 경우는 지역변수가 읽히기만 하고 변경되지 않을 때다. 이럴 땐
 지역변수를 그냥 매개변수로 전달하면 된다.
+
+~~~
+void printOwing() {
+    Enumeration e = _orders.elements();
+    double outstanding = 0.0;
+    printBanner();
+    
+    while (e.hasMorElements()) {
+        Order each = (Order) e.nextElement();
+        outstanding += each.getAmount();
+    }
+    //세부 내역 출력
+    System.out.println("고객명: " +_name)
+    System.out.println("외상액: " + outstanding);
+}
+~~~
