@@ -76,3 +76,21 @@ void printOwing() {
     System.out.println("외상액: " + outstanding);
 }
 ~~~
+
+메서드 내용 직접 삽입
+메서드 기능이 너무 단순해서 메서드명만 봐도 너무 뻔할 땐
+그 메서드의 긴ㅇ을 호출하는 메서드에 넣어버리고 그 메서는 삭제하자.
+
+~~~
+int getRating(){
+    return (moreThanfiveLateDeliveries()) ? 2 : 1);
+
+boolean moreThanfiveLateDeleiveries(){
+    return _numberOfLateDeliveries > 5;
+}
+~~~
+~~~
+int getRating(){
+    return (_numberOfLateDeliveries >5) ? 2 : 1;
+}
+~~~
